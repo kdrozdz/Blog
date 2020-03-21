@@ -11,7 +11,7 @@
             <div class="date">
                 <p>Opublikowano: {{ post.published_date|date:"D M Y"}}</p>
             </div>
-            <a href="{% url 'post_detail' pk=post.pk %}">Komentarze: {{ post.approve_comments.count }}</a>
+            <a href="{% url 'post_detail' pk=post.pk %}">Komentarze: {{ post.approve_comments|length }}</a>
         </div>
     {% endfor %}
 </div>
